@@ -52,7 +52,7 @@ constructor(private http:HttpClient) {
     this.organizeHistory(tag);
     const params = new HttpParams()
                         .set('api_key', this.apiKey)
-                        .set('limit', '10')
+                        .set('limit', '20')
                         .set('q', tag)
 
     this.http.get<SearchResponse>( `${this.serviceURL}/search`, {params})
